@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <div>
+            <input type="text" placeholder="Initial Coords (X, Z)" value="" id="_coords"></input>
+        </div>
+        <button onclick="CalculateNetherCoords()">Calculate Nether Coords</button>
+        <button onclick="CalculateOverworldCoords()">Calculate Overworld Coords</button>
+        <div>
+            <input id="_ConvertedCoords" type="text" placeholder="Converted Coords"></input>
+        </div>
+        <h1 style="color: #444;">________________________________________________________________________________</h1>
+
+        <div>
+            <!-- Create firework-->
+            <select id="FireworkType">
+                <option value="0" id="_small">Small Ball</option>
+                <option value="1" id="_large">Large Ball</option>
+                <option value="2" id="_star">Star-Shaped</option>
+                <option value="3" id="_creeper">Creeper-Shaped</option>
+                <option value="4" id="_burst">Burst</option>
+            </select>
+            <div>
+                <div>
+                    <input type="checkbox" class="Flicker" id="_Flicker" name="Flicker" value="1" >
+                    <label for="_Flicker" style="color: #AAA"> Flicker</label><br>
+                </div>
+                <div>
+                    <input type="checkbox" id="_Trail" name="Trail" value="1">
+                    <label for="_Trail" style="color: #AAA"> Trail</label><br>
+                </div>
+            </div>
+            
+            <div class="color-input-container">
+                <input type="color" id="colorInput">
+                <button onclick="addColor()">Add Color</button>
+                <ul id="colorList"></ul>
+            </div>
+            <div class="color-input-container">
+                <input type="color" id="colorFadeInput">
+                <button onclick="addColorFade()">Add Fade color</button>
+                <ul id="colorFadeList"></ul>
+            </div>
+            <button onclick="CreateFirework()">Generate Firework</button>
+        </div>
+        <script src="scripts.js"></script>
+    </body>
+</html>
